@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CaracaMann Stream Suite</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: one readable column, a short "app card" header, then policy sections with plain headings */
+:root {
+  --bg: #f6f7fa; --surface: #ffffff; --fg: #1b1f2a; --muted: #5a6275;
+  --line: #dde1ea; --accent: #6b3fd6;
+  --display: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12141b; --surface: #1a1d27; --fg: #e8eaf1; --muted: #a2a9ba; --line: #2c3040; --accent: #a98bff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12141b; --surface: #1a1d27; --fg: #e8eaf1; --muted: #a2a9ba; --line: #2c3040; --accent: #a98bff; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.65 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; }
+main { max-width: 680px; margin: 0 auto; display: grid; gap: 32px; }
+header { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: grid; gap: 8px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { font: 700 30px/1.2 var(--display); margin: 0; text-wrap: balance; }
+h2 { font: 600 19px/1.3 var(--display); margin: 0 0 8px; text-wrap: balance; }
+p, ul { margin: 0; }
+ul { padding-left: 20px; display: grid; gap: 6px; }
+section { display: grid; gap: 8px; min-width: 0; }
+.meta { color: var(--muted); font-size: 14px; }
+code { font: 14px var(--mono); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.contact { user-select: all; font-family: var(--mono); font-size: 15px; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-weight: 600; }
+.yt { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.yt::before { content: ""; width: 22px; height: 16px; border-radius: 4px; background: #ff0033;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 38% 25%, 38% 75%, 70% 50%, 38% 25%); }
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+
+<main>
+  <header>
+    <span class="eyebrow">Desktop app · Windows · Private use</span>
+    <h1>CaracaMann Stream Suite</h1>
+    <p>A personal desktop tool used by the creator of the CaracaMann YouTube channel to cut livestream recordings into clips and upload them to his own channel.</p>
+    <p class="yt">Uses YouTube API Services</p>
+    <nav class="links"><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a></nav>
+    <p class="meta">Effective November 8, 2026</p>
+  </header>
+
+  <section id="privacy">
+    <span class="eyebrow">Privacy Policy</span>
+    <h2>What the app is</h2>
+    <p>CaracaMann Stream Suite runs only on the developer's own Windows computer. It is not sold, not distributed and not offered to the public. Its only user is the developer, Allan Caraça, who owns the YouTube channel the app uploads to.</p>
+  </section>
+
+  <section>
+    <h2>How it uses YouTube API Services</h2>
+    <p>The app uses the YouTube Data API v3 to:</p>
+    <ul>
+      <li>upload videos (clips, Shorts and full broadcasts) to the developer's own channel;</li>
+      <li>set each video's title, description, chapters, privacy status and thumbnail;</li>
+      <li>read the view counts of the developer's own videos, to show which kinds of clips perform best.</li>
+    </ul>
+    <p>It requests only the permissions needed for those actions. It does not read, collect or store data about other YouTube users, channels or viewers.</p>
+    <p>By using this app you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>. Google's handling of data is covered by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>Instagram and TikTok</h2>
+    <p>The app also publishes the same clips to the developer's own accounts on two other platforms:</p>
+    <ul>
+      <li><b>Instagram</b> (through the Instagram API with Facebook Login): uploads a clip and publishes it as a Reel with its caption on the developer's own Instagram professional account.</li>
+      <li><b>TikTok</b> (through the TikTok Content Posting API): uploads a clip to the developer's own TikTok inbox as a draft. The developer finishes and publishes it in the TikTok app.</li>
+    </ul>
+    <p>On both platforms the app only sends videos and captions to the developer's own account. It does not read followers, comments, messages or any data about other users. Meta's and TikTok's handling of data is covered by the <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Meta Privacy Policy</a> and the <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener">TikTok Privacy Policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>Data the app stores</h2>
+    <ul>
+      <li>The Google, Meta and TikTok sign-in tokens are saved only on the user's computer, in <code>%APPDATA%\CaracaMannSuite</code>. Each token is sent only to the platform that issued it.</li>
+      <li>Video files, titles and descriptions stay on the user's computer until they are uploaded.</li>
+      <li>View counts are read on demand and shown on screen only. They are not saved.</li>
+      <li>The app has no website backend, no analytics, no cookies and no advertising.</li>
+      <li>No data is sold or shared with third parties.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Removing access and data</h2>
+    <p>Access can be revoked at any time in the <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions page</a>, in Facebook's Business Integrations settings, and in TikTok's Manage app permissions settings. Deleting the folder <code>%APPDATA%\CaracaMannSuite</code> removes every piece of data the app keeps.</p>
+  </section>
+
+  <section>
+    <h2>Changes</h2>
+    <p>If the app's use of YouTube data changes, this page will be updated and the effective date above will change.</p>
+  </section>
+
+  <section id="terms">
+    <span class="eyebrow">Terms of Service</span>
+    <h2>Terms of use</h2>
+    <ul>
+      <li>CaracaMann Stream Suite is a private tool for uploading content to the developer's own YouTube channel and Instagram and TikTok accounts. It is provided as is, without warranty.</li>
+      <li>Anyone using the app must follow the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>, the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>, the <a href="https://help.instagram.com/581066165581870" target="_blank" rel="noopener">Instagram Terms of Use</a> and the <a href="https://www.tiktok.com/legal/terms-of-service" target="_blank" rel="noopener">TikTok Terms of Service</a>.</li>
+      <li>Only content the user owns or has the right to publish may be uploaded.</li>
+      <li>The app does not download, re-host or modify other people's YouTube content.</li>
+      <li>Access to YouTube can be removed at any time, as described in the Privacy Policy above.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Contact: <span class="contact">allancaraca@gmail.com</span></p>
+  </footer>
+</main>
+</body>
+</html>
